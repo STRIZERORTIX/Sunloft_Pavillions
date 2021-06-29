@@ -1,0 +1,6 @@
+RECTANGLE(x1,y1.x2.y2)
+outtextxy(x,y)
+cout
+setbkcolor
+
+

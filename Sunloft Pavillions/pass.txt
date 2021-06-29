@@ -1,0 +1,56 @@
+			   int i;
+			   char a[20];
+			   cout<<endl<<"PASSWORD:";
+			   for(i=0;i<16;i++)
+			   {
+				 if(i==15)
+				 {
+				    char c;
+				    c=getch();
+				    if(c==13)
+				    {
+					a[i]='\0';
+					break;
+				    }
+				    else if(c==8)
+				    {
+					i-=2;
+					cout<<"\b \b";
+				    }
+				    else
+				    {
+					i-=1;
+				    }
+				 }
+				 else
+				 {
+				 a[i]=getch();
+				 if(a[i]!=13)
+				 {
+				 if(a[i]!=8)
+				 {
+				 /*cout<<a[i];
+				 delay(300);
+				 cout<<"\b";*/
+				 cout<<"*";
+				 }
+				 }
+				 if(a[i]==8)
+				 {
+				    if(i==0)
+				    {
+				       i-=1;
+				    }
+				    if(i>0)
+				    {
+				       cout<<"\b \b";
+				       i-=2;
+				    }
+				 }
+				 if(a[i]==13)
+				 {
+				 a[i]='\0';
+				 break;
+				 }
+				 }
+			   }
